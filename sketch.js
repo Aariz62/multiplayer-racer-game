@@ -1,10 +1,21 @@
+var database
+var gameState=0
+var playerCount
+
 function setup(){
-  var canvas=createCanvas(400,400);
+  var canvas=createCanvas(displayWidth,displayHeight);
+
+  database=firebase.database()
+
+  form=new Form()
+
+ form.display()
+
+
 }
 function draw()
 {
-  background(0);
-  rectMode(CENTER);
-    rect(200,200,50,50);
+  background("white");
+  
   
 }
