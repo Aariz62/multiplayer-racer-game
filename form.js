@@ -16,12 +16,18 @@ class Form{
         this.button=createButton('play')
         this.button.position(750,400)
         this.button.mousePressed(()=>{
-            var name=this.input.value()
+            player.name=this.input.value()
             this.input.hide()
             this.button.hide()
             this.greetings=createElement("h2")
-            this.greetings.html("welcome " +name)
+            this.greetings.html("welcome " +player.name)
             this.greetings.position(600,300)
+
+            playerCount++
+            player.updateCount(playerCount)
+
+            player.index=playerCount
+            player.update()
         })
     }
 }
